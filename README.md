@@ -10,7 +10,6 @@
    <img width="1470" alt="Screenshot 2025-04-28 at 3 27 35 PM" src="https://github.com/user-attachments/assets/249b96d9-a212-4531-98d0-afab0ba3fdb6" />
 
 3.PUNISHMENT ASSIGNMENT
-<img width="1470" alt="Screenshot 2025-04-28 at 3 29 02 PM" src="https://github.com/user-attachments/assets/0fd4d70f-9993-43a5-bfa7-95cfec318528" />
 
 
 
