@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>csstas3</title>
+    <style>
+        /* Desktop version */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #4A90E2; /* New color */
+            padding: 15px 0; /* Slightly more padding */
+        }
+
+        nav a {
+            padding: 12px;
+            text-decoration: none;
+            color: #ffffff; /* New color */
+            font-weight: bold;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 12px 0;
+            }
+        }
+
+        /* Desktop version */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .content {
+            width: 48%;
+            padding: 25px;
+            background-color: #f0f8ff; /* New color */
+            border-radius: 8px;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .content {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+
+        /* Default (desktop) */
+        h1 {
+            font-size: 36px;
+            color: #2C3E50; /* New color */
+            margin: 20px;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+                margin: 15px;
+            }
+        }
+
+        /* Desktop version */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px; /* Slightly more gap */
+            margin: 20px;
+        }
+
+        .card {
+            padding: 20px;
+            background-color: #E8EAF6; /* New color */
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Desktop version */
+        body {
+            background-color: #E3F2FD; /* New color */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            body {
+                background-color: #C8E6C9; /* New color */
+            }
+        }
+
+        /* Sidebar is visible on larger screens */
+        .sidebar {
+            width: 280px;
+            float: left;
+            background-color: #BBDEFB; /* New color */
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .main-content {
+            margin-left: 300px;
+            padding: 20px;
+            background-color: #F5F5F5;
+            border-radius: 8px;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+
+        /* Container for items */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 30%;
+            padding: 15px;
+            background-color: #D1C4E9; /* New color */
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .item {
+                width: 80%;
+            }
+        }
+
+        /* Default (desktop) */
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #7E57C2; /* New color */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            button {
+                padding: 15px 30px;
+                font-size: 18px;
+            }
+        }
+
+        /* Default (desktop) */
+        img {
+            max-width: 100%;
+            height: auto;
+            width: 140px;
+            height: 160px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            img {
+                width: 80%;
+            }
+        }
+
+        /* Default h1 styles */
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        /* Tablet screens */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        /* Mobile phones */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="content">Content 1</div>
+        <div class="content">Content 2</div>
+    </div>
+
+    <h1>Welcome to My Website</h1>
+
+    <div class="sidebar">Sidebar Content</div>
+    <div class="main-content">Main Content</div>
+
+    <div class="card-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </div>
+
+    <h1>Responsive Background</h1>
+
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h1>Heading Title</h1>
+
+    <button>Click Me</button>
+
+    <img src="https://imgs.search.brave.com/tKtRPl3CRGDfWUBS6CjJ43ClKSq9HaaJVwj5KTEAN0w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTc5/MzUwNTU5L3Bob3Rv/L21vbnRyZXV4LXN3/aXR6ZXJsYW5kLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1Y/aVJKbmR1S1NYNEVk/WU9KREZqNXFtekRl/SFlwdEZzZktWSG5l/bDZJcDVrPQ" alt="Sample Image">
+
+    <h1>Responsive Font Size</h1>
+
+</body>
+</html>
