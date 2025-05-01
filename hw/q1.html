@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS unit example</title>
+    <style>
+        body{
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container{
+            display: flex;
+            justify-content: row;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        .sub{
+            width: 200px;
+            height: 200px;
+            background-color: #4CAF50;
+            margin: 10px;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        .sub p{
+            text-align: center;
+        }
+        .rem-px-box{
+            padding: 2rem;
+            max-width: 300px;
+        }
+        .vw-vh-box{
+            width: 50vw;
+            height: 50vh;
+        }
+        .percent-box{
+            width: 50%;
+            height: 50%;
+        }
+        .vmin-box{
+            width: 50vmin;
+            height: 50vmin;
+        }
+        .em-box{
+            width: 20em;
+            height: 20em;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">CSS unit example</h1>
+    <div class="container">
+        <div class="sub rem-px-box">
+            <p>This box uses rem for padding and px for max-widht</p>
+        </div>
+        <div class="sub vw-vh-box">
+            <p>This box uses vw for widht and vh for height</p>
+        </div>
+        <div class="sub percent-box">
+            <p>This box uses % for widht and height</p>
+        </div>
+        <div class="sub vmin-box">
+            <p>This box uses vmin for widht and height</p>
+        </div>
+        <div class="sub em-box">
+            <p>This box uses em for widht and height</p>
+        </div>
+        
+    </div>
+</body>
+</html>

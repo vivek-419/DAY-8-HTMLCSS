@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Image Gallery Hover Effects</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .img-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      height: 300px;
+      cursor: pointer;
+    }
+
+    .img-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease;
+      display: block;
+    }
+
+    /* 1. Zoom + Brighten */
+    .effect-zoom:hover img {
+      transform: scale(1.2);
+      filter: brightness(1.2);
+    }
+
+    /* 2. Grayscale to Color */
+    .effect-grayscale img {
+      filter: grayscale(100%);
+      transition: filter 0.4s ease;
+    }
+
+    .effect-grayscale:hover img {
+      filter: grayscale(0%);
+    }
+
+    .effect-overlay .overlay-text {
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      text-align: center;
+      transition: bottom 0.4s ease;
+    }
+
+    .effect-overlay:hover .overlay-text {
+      bottom: 0;
+    }
+
+    .effect-blur::after {
+      content: 'THE GOD OF FOOTBALL';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 1.5em;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .effect-blur:hover::after {
+      opacity: 1;
+    }
+
+    .effect-blur:hover img {
+      filter: blur(2px) brightness(0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery">
+    
+    <div class="img-card effect-zoom">
+      <img src="https://imgs.search.brave.com/PzaA1akEIVxeiaWtwAcBRA8XzkrjQsyO3MDmDit9g_M/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjE1/Njg2NzY1NC9waG90/by9jaGljYWdvLWls/bGlub2lzLWxpb25l/bC1tZXNzaS1vZi1h/cmdlbnRpbmEtbG9v/a3Mtb24taW4tdGhl/LXNlY29uZC1oYWxm/LWFnYWluc3QtZWN1/YWRvci1kdXJpbmcu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PWVuSzViVjBjVmEt/NU5TcXd4UEwtV2pl/NFU3VUFKOGF3U3At/WmMwUG5ERDA9" alt="Zoom Effect">
+    </div>
+
+    <div class="img-card effect-grayscale">
+      <img src="https://imgs.search.brave.com/5HMRLKB0RUKooFK-M11fM3txCh4oqRNp50NICWbzAzs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2MxLzZi/L2ExL2MxNmJhMWQx/MzlhYjY0YzkxYzM1/MThjNGQ0ZTEwMDBm/LmpwZw" alt="Grayscale to Color">
+    </div>
+
+    <div class="img-card effect-overlay">
+      <img src="https://imgs.search.brave.com/RQTnMEs40-PJtZctbbSG6GpGavH5UsU8aq3LQJWWA7o/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzcyLzU4/Lzk0LzcyNTg5NGU4/MDg0MDRkN2I0NzJh/YjNiYTk2ZjY3YmZh/LmpwZw" alt="Overlay Text">
+      <div class="overlay-text">LEO MESSI</div>
+    </div>
+
+    <div class="img-card effect-blur">
+      <img src="https://imgs.search.brave.com/GoX2nX7Z6NJQRrkLmPqIz17RK_doNNpHjwSL2XRhuZA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzI3LzZm/L2JlLzI3NmZiZWZk/MDA2MjNmZGJlYWRl/OGM2ODdjOTQ3ZGU4/LmpwZw" alt="Blur Text">
+    </div>
+
+  </div>
+
+</body>
+</html>
